@@ -1,1 +1,2 @@
+# ignoramos la carpeta .vs porque es la que nos da error en los permisos
 .vs/
