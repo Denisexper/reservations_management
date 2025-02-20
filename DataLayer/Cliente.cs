@@ -8,9 +8,9 @@ namespace DataLayer
 {
     public class Cliente
     {
-        //test 2
-
-        public int Id { get; set; }
-        public string Nombre { get; set; }
+        public bool ValidarCliente(string nombre, string apellido)
+        {
+            return true;
+        }
     }
 }

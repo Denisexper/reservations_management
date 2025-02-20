@@ -1,12 +1,61 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EAAF45F-066F-475B-8B93-7FAB18FE2A65}|DataLayer\\DataLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\datalayer\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAAF45F-066F-475B-8B93-7FAB18FE2A65}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EAAF45F-066F-475B-8B93-7FAB18FE2A65}|DataLayer\\DataLayer.csproj|C:\\Users\\vasqu\\source\\repos\\reservations_management\\datalayer\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EAAF45F-066F-475B-8B93-7FAB18FE2A65}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\DataLayer\\usuarios.cs",
+              "RelativeDocumentMoniker": "DataLayer\\usuarios.cs",
+              "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\DataLayer\\usuarios.cs",
+              "RelativeToolTip": "DataLayer\\usuarios.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T14:13:06.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\DataLayer\\Cliente.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Cliente.cs",
+              "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\DataLayer\\Cliente.cs",
+              "RelativeToolTip": "DataLayer\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T03:00:05.346Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
