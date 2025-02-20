@@ -21,7 +21,7 @@
                 OnRowDeleting="GridView1_RowDeleting" 
                 OnRowEditing="GridView1_RowEditing" 
                 OnRowUpdating="GridView1_RowUpdating" 
-                CssClass="table table-bordered table-striped">
+                CssClass="table table-bordered table-striped" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="id_habitaciones" HeaderText="ID" />
                     <asp:BoundField DataField="numero" HeaderText="Numero" />
