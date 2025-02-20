@@ -21,7 +21,7 @@
                 <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingresa tu contraseña"></asp:TextBox>
             </div>
             <div class="mb-3 text-center">
-                <asp:Button ID="Button1" runat="server" CssClass="btn btn-warning w-100" OnClick="Button1_Click" Text="Iniciar sesión" />
+                <asp:Button ID="Button1" runat="server" CssClass="btn btn-info w-100" OnClick="Button1_Click" Text="Iniciar sesión" />
             </div>
             <div class="text-center">
                 <asp:Label ID="Label1" runat="server" CssClass="text-danger"></asp:Label>
