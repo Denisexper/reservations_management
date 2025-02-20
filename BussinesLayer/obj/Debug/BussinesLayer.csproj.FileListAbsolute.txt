@@ -16,3 +16,12 @@ C:\Users\vasqu\Source\Repos\hotel_management_project\BussinesLayer\obj\Debug\Bus
 C:\Users\vasqu\Source\Repos\hotel_management_project\BussinesLayer\obj\Debug\Bussines.7AD6049C.Up2Date
 C:\Users\vasqu\Source\Repos\hotel_management_project\BussinesLayer\obj\Debug\BussinesLayer.dll
 C:\Users\vasqu\Source\Repos\hotel_management_project\BussinesLayer\obj\Debug\BussinesLayer.pdb
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\bin\Debug\BussinesLayer.dll
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\bin\Debug\BussinesLayer.pdb
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\bin\Debug\DataLayer.dll
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\bin\Debug\DataLayer.pdb
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\obj\Debug\BussinesLayer.csproj.AssemblyReference.cache
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\obj\Debug\BussinesLayer.csproj.CoreCompileInputs.cache
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\obj\Debug\Bussines.7AD6049C.Up2Date
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\obj\Debug\BussinesLayer.dll
+C:\Users\vasqu\Source\Repos\reservations_management\BussinesLayer\obj\Debug\BussinesLayer.pdb
