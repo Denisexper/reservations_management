@@ -1,6 +1,7 @@
 ﻿using BussinesLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -39,6 +40,7 @@ namespace PresentatonLayer
             GridView1.DataSource = negocioHabitaciones.obtenerHabitaciones();
             GridView1.DataBind();
         }
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -103,8 +105,9 @@ namespace PresentatonLayer
             string descripcion = (crow.Cells[2].Controls[0] as System.Web.UI.WebControls.TextBox).Text;
             int huespedes = int.Parse((crow.Cells[3].Controls[0] as System.Web.UI.WebControls.TextBox).Text);
             int idUsuario = int.Parse((crow.Cells[4].Controls[0] as System.Web.UI.WebControls.TextBox).Text);
+            
 
-            if(!negocioHabitaciones.UsuarioExiste(idUsuario))
+            if (!negocioHabitaciones.UsuarioExiste(idUsuario))
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
                               "Swal.fire('Error', 'El usuario no existe', 'error');", true);

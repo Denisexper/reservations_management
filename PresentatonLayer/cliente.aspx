@@ -40,7 +40,6 @@
 
         <!-- contenido -->
     </div>
-
     <div class="container mt-4">
         <form id="form1" runat="server">
             <div class="row">
@@ -66,7 +65,7 @@
                             <asp:BoundField DataField="telefono" HeaderText="Teléfono" />
                             <asp:BoundField DataField="correo" HeaderText="Correo" />
                             <asp:BoundField DataField="departamento" HeaderText="Departamento" />
-                            <asp:BoundField DataField="fecha_registro" HeaderText="Fecha" />
+                            <asp:BoundField DataField="fecha_registro" HeaderText="Fecha Registro" />
                             <asp:BoundField DataField="id_usuario" HeaderText="Usuario" />
 
                             <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
@@ -109,7 +108,7 @@
                                     <asp:TextBox ID="txtdepartamento" runat="server" CssClass="form-control" Width="100%"></asp:TextBox>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="txtFechaRegistro" class="form-label">Fecha</label>
+                                    <label for="txtFechaRegistro" class="form-label">Fecha Registro</label>
                                     <asp:TextBox ID="txtFechaRegistro" runat="server" TextMode="Date" CssClass="form-control" Width="100%"></asp:TextBox>
                                 </div>
                             </div>
@@ -128,7 +127,6 @@
                     </div>
                 </div>
             </div>
-
 
         </form>
 </body>

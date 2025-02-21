@@ -40,28 +40,35 @@
         </nav>
 
     </div>
-    <!-- contenido de la pagina-->
-    <form id="form1" runat="server">
-        <div class="container mt-4">
-            <asp:GridView ID="GridView1" runat="server"
-                AutoGenerateColumns="False"
-                DataKeyNames="id_habitaciones"
-                OnRowCancelingEdit="GridView1_RowCancelingEdit"
-                OnRowDeleting="GridView1_RowDeleting"
-                OnRowEditing="GridView1_RowEditing"
-                OnRowUpdating="GridView1_RowUpdating"
-                CssClass="table table-bordered table-striped">
-                <Columns>
-                    <asp:BoundField DataField="id_habitaciones" HeaderText="ID" />
-                    <asp:BoundField DataField="numero" HeaderText="Numero" />
-                    <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
-                    <asp:BoundField DataField="huespedes" HeaderText="Huespedes" />
-                    <asp:BoundField DataField="id_usuario" HeaderText="ID Usuario" />
 
-                    <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
-                    <asp:CommandField ShowDeleteButton="True" DeleteText="Eliminar" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm" />
-                </Columns>
-            </asp:GridView>
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h2 class="text-center">Gestionar Habitaciones</h2>
+        </div>
+    </div>
+        <!-- contenido de la pagina-->
+        <form id="form1" runat="server">
+            <div class="container mt-4">
+                <asp:GridView ID="GridView1" runat="server"
+                    AutoGenerateColumns="False"
+                    DataKeyNames="id_habitaciones"
+                    OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                    OnRowDeleting="GridView1_RowDeleting"
+                    OnRowEditing="GridView1_RowEditing"
+                    OnRowUpdating="GridView1_RowUpdating"
+                    CssClass="table table-bordered table-striped">
+                    <Columns>
+                        <asp:BoundField DataField="id_habitaciones" HeaderText="ID" />
+                        <asp:BoundField DataField="numero" HeaderText="Numero" />
+                        <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
+                        <asp:BoundField DataField="huespedes" HeaderText="Huespedes" />
+                        <asp:BoundField DataField="id_usuario" HeaderText=" ID Usuario" />
+
+                        <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
+                        <asp:CommandField ShowDeleteButton="True" DeleteText="Eliminar" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm" />
+                    </Columns>
+                </asp:GridView>
+            </div>
 
             <div class="container mt-5">
                 <div class="row justify-content-center">
@@ -103,6 +110,6 @@
                     </div>
                 </div>
             </div>
-    </form>
+        </form>
 </body>
 </html>

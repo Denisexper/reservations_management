@@ -31,6 +31,7 @@ namespace DataLayer
             return dt;
         }
 
+
         public bool AgregarHabitacion(int numero, string descripcion, int huespedes, int idUsuario)
         {
             using (SqlConnection con = new SqlConnection(conexionString))
@@ -102,5 +103,27 @@ namespace DataLayer
                 }
             }
         }
+
+        public DataTable ObtenerNombre()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(conexionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(@"
+                    SELECT h.id_habitaciones, h.numero, h.descripcion, h.huespedes, u.nombre_usuario 
+                    FROM Habitaciones h
+                    JOIN Usuarios u ON h.id_usuario = u.id_usuario", con))
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
     }
 }

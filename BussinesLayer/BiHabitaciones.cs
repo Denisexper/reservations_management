@@ -42,5 +42,10 @@ namespace BussinesLayer
         {
             return habitacionesN.UsuarioExiste(idUsuario);
         }
+
+        public DataTable ObtenerNombre()
+        {
+            return habitacionesN.ObtenerNombre();
+        }
     }
 }
