@@ -43,6 +43,7 @@ namespace BussinesLayer
             return habitacionesN.UsuarioExiste(idUsuario);
         }
 
+        //prueba para obtener nombre del usuario y no no guardar el id
         public DataTable ObtenerNombre()
         {
             return habitacionesN.ObtenerNombre();

@@ -62,7 +62,7 @@
                         <asp:BoundField DataField="numero" HeaderText="Numero" />
                         <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
                         <asp:BoundField DataField="huespedes" HeaderText="Huespedes" />
-                        <asp:BoundField DataField="id_usuario" HeaderText=" ID Usuario" />
+                        <asp:BoundField DataField="id_usuario" HeaderText="Usuario" />
 
                         <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
                         <asp:CommandField ShowDeleteButton="True" DeleteText="Eliminar" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm" />

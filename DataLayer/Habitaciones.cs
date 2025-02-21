@@ -104,6 +104,7 @@ namespace DataLayer
             }
         }
 
+        //prueba para obtener nombre del usuario y no no guardar el id
         public DataTable ObtenerNombre()
         {
             DataTable dt = new DataTable();
@@ -112,15 +113,16 @@ namespace DataLayer
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand(@"
-                    SELECT h.id_habitaciones, h.numero, h.descripcion, h.huespedes, u.nombre_usuario 
-                    FROM Habitaciones h
-                    JOIN Usuarios u ON h.id_usuario = u.id_usuario", con))
+                    SELECT h.id_habitaciones, h.numero, h.descripcion, h.huespedes, u.usuario 
+                    FROM [dbo].[habitaciones] h
+                    INNER JOIN [dbo].[usuarios] u ON h.id_usuario = u.id", con))
                 {
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
                         da.Fill(dt);
                     }
                 }
+
             }
             return dt;
         }
