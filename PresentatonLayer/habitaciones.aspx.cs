@@ -104,7 +104,13 @@ namespace PresentatonLayer
             int huespedes = int.Parse((crow.Cells[3].Controls[0] as System.Web.UI.WebControls.TextBox).Text);
             int idUsuario = int.Parse((crow.Cells[4].Controls[0] as System.Web.UI.WebControls.TextBox).Text);
 
-            
+            if(!negocioHabitaciones.UsuarioExiste(idUsuario))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                              "Swal.fire('Error', 'El usuario no existe', 'error');", true);
+                return;
+            }
+
             if (negocioHabitaciones.ModificarHabitacion(id, numero, descripcion, huespedes, idUsuario))
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",

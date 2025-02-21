@@ -58,6 +58,15 @@ namespace PresentatonLayer
             DateTime fecha_registro = DateTime.Parse((crow.Cells[6].Controls[0] as TextBox).Text);
             int id_usuario = int.Parse((crow.Cells[7].Controls[0] as TextBox).Text);
 
+            if (!negocioCliente.UsuarioExiste(id_usuario))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                              "Swal.fire('Error', 'Usuario no existe', 'error');", true);
+
+                
+                return;
+            }
+
             if (negocioCliente.ModificarCliente(id, nombre, dui, telefono, correo, departamento, fecha_registro, id_usuario))
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",

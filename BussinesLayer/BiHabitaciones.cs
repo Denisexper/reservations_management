@@ -37,5 +37,10 @@ namespace BussinesLayer
         {
             return habitacionesN.EliminarHabitacion(id);
         }
+
+        public bool UsuarioExiste(int idUsuario)
+        {
+            return habitacionesN.UsuarioExiste(idUsuario);
+        }
     }
 }

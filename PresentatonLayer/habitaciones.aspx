@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- link SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Bootstrap CSS -->
@@ -12,9 +12,9 @@
     <title>Habitaciones</title>
 </head>
 <body>
-        <!-- navbar -->
-        <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+    <!-- navbar -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="principal.aspx">Hotel Costa Surf</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,29 +32,24 @@
                             <a class="nav-link" href="cliente.aspx">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="reservas.aspx">Reservas</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-    
-        <div class="container mt-5 pt-5">
-            <h1 class="text-center">BIENVENIDOS AL DASHBOARD DEL HOTEL COASTA SURF</h1>
-            <h2 class="text-center">Gestiona habitaciones, servicios y más desde aquí.</h2>
-        </div>
     </div>
     <!-- contenido de la pagina-->
     <form id="form1" runat="server">
         <div class="container mt-4">
-            <asp:GridView ID="GridView1" runat="server" 
-                AutoGenerateColumns="False" 
+            <asp:GridView ID="GridView1" runat="server"
+                AutoGenerateColumns="False"
                 DataKeyNames="id_habitaciones"
-                OnRowCancelingEdit="GridView1_RowCancelingEdit" 
-                OnRowDeleting="GridView1_RowDeleting" 
-                OnRowEditing="GridView1_RowEditing" 
-                OnRowUpdating="GridView1_RowUpdating" 
+                OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                OnRowDeleting="GridView1_RowDeleting"
+                OnRowEditing="GridView1_RowEditing"
+                OnRowUpdating="GridView1_RowUpdating"
                 CssClass="table table-bordered table-striped">
                 <Columns>
                     <asp:BoundField DataField="id_habitaciones" HeaderText="ID" />
@@ -68,31 +63,46 @@
                 </Columns>
             </asp:GridView>
 
-            <h2>Agregar nueva Habitacion</h2>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <h2 class="text-center mb-4">Agregar nueva Habitación</h2>
 
-            <div class="form-group">
-                <asp:Label ID="Label1" runat="server" Text="Numero" CssClass="form-label"></asp:Label>
-                <asp:TextBox ID="txtnumero" runat="server" CssClass="form-control" Width="157px"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="Label2" runat="server" Text="Descripcion" CssClass="form-label"></asp:Label>
-                <asp:TextBox ID="txtdescripcion" runat="server" CssClass="form-control" Width="157px"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="Label3" runat="server" Text="Huespedes" CssClass="form-label"></asp:Label>
-                <asp:TextBox ID="txthuespedes" runat="server" CssClass="form-control" Width="157px"></asp:TextBox>
-                
-            </div>
-            <div class="form-group">
-                <asp:Label ID="Label4" runat="server" Text="ID Usuario" CssClass="form-label"></asp:Label>
-                <asp:DropDownList ID="ddlUsuario" runat="server"></asp:DropDownList>
-                <br />
-            </div>
+                        <div class="card p-4 shadow">
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="txtnumero" class="form-label">Número</label>
+                                        <asp:TextBox ID="txtnumero" runat="server" CssClass="form-control"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="txthuespedes" class="form-label">Huéspedes</label>
+                                        <asp:TextBox ID="txthuespedes" runat="server" CssClass="form-control"></asp:TextBox>
+                                    </div>
+                                </div>
 
-            <div class="form-group">
-                <asp:Button ID="BtnGuardar" runat="server" OnClick="Button1_Click" Text="Guardar" CssClass="btn btn-warning" />
+                                <div class="row mb-3">
+                                    <div class="col-md-12">
+                                        <label for="txtdescripcion" class="form-label">Descripción</label>
+                                        <asp:TextBox ID="txtdescripcion" runat="server" CssClass="form-control"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-12">
+                                        <label for="ddlUsuario" class="form-label">ID Usuario</label>
+                                        <asp:DropDownList ID="ddlUsuario" runat="server" CssClass="form-select"></asp:DropDownList>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <asp:Button ID="BtnGuardar" runat="server" OnClick="Button1_Click" Text="Guardar" CssClass="btn btn-primary w-50" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </form>
 </body>
 </html>

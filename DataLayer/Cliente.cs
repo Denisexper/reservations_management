@@ -55,16 +55,17 @@ namespace DataLayer
 
         }
 
-        public bool ClienteExiste(int idUsuario)
+        public bool UsuarioExiste(int idUsuario)
         {
             using (SqlConnection con = new SqlConnection(conexionString))
             {
-                string query = "SELECT COUNT(*) FROM cliente WHERE id = @id";
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@id", idUsuario);
+
                 con.Open();
-                int cantidad = (int)cmd.ExecuteScalar();
-                return cantidad > 0;
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0; // Retorna true si el usuario existe
             }
         }
 

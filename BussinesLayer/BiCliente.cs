@@ -32,5 +32,10 @@ namespace BussinesLayer
         {
             return clientesN.EliminarCliente(id);
         }
+
+        public bool UsuarioExiste(int idUsuario)
+        {
+            return clientesN.UsuarioExiste(idUsuario);
+        }
     }
 }

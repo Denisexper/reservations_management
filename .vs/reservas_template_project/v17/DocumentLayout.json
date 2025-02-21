@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\cliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\cliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\cliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\cliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\habitaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\habitaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\reservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\reservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\habitaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|C:\\Users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\habitaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\habitaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|c:\\users\\vasqu\\source\\repos\\reservations_management\\presentatonlayer\\cliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{951C6E65-A0CF-4503-8F45-4E92126B72FF}|PresentatonLayer\\PresentatonLayer.csproj|solutionrelative:presentatonlayer\\cliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,54 +38,28 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "reservas.aspx",
+              "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\reservas.aspx",
+              "RelativeDocumentMoniker": "PresentatonLayer\\reservas.aspx",
+              "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\reservas.aspx*",
+              "RelativeToolTip": "PresentatonLayer\\reservas.aspx*",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-21T04:22:47.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "index.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\index.aspx.cs",
-              "RelativeDocumentMoniker": "PresentatonLayer\\index.aspx.cs",
-              "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\index.aspx.cs",
-              "RelativeToolTip": "PresentatonLayer\\index.aspx.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwCYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T02:56:50.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "cliente.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\cliente.aspx.cs",
-              "RelativeDocumentMoniker": "PresentatonLayer\\cliente.aspx.cs",
-              "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\cliente.aspx.cs",
-              "RelativeToolTip": "PresentatonLayer\\cliente.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T02:47:31.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "cliente.aspx",
               "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\cliente.aspx",
               "RelativeDocumentMoniker": "PresentatonLayer\\cliente.aspx",
               "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\cliente.aspx",
               "RelativeToolTip": "PresentatonLayer\\cliente.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-21T02:45:19.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "habitaciones.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\vasqu\\Source\\Repos\\reservations_management\\PresentatonLayer\\habitaciones.aspx.cs",
-              "RelativeDocumentMoniker": "PresentatonLayer\\habitaciones.aspx.cs",
-              "ToolTip": "C:\\Users\\vasqu\\Source\\Repos\\reservations_management\\PresentatonLayer\\habitaciones.aspx.cs",
-              "RelativeToolTip": "PresentatonLayer\\habitaciones.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T02:42:47.755Z",
+              "WhenOpened": "2025-02-21T04:21:27.966Z",
               "EditorCaption": ""
             },
             {
@@ -99,6 +73,32 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-02-21T02:42:29.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "principal.aspx",
+              "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\principal.aspx",
+              "RelativeDocumentMoniker": "PresentatonLayer\\principal.aspx",
+              "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\principal.aspx",
+              "RelativeToolTip": "PresentatonLayer\\principal.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-21T04:20:48.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.aspx",
+              "DocumentMoniker": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\index.aspx",
+              "RelativeDocumentMoniker": "PresentatonLayer\\index.aspx",
+              "ToolTip": "C:\\Users\\vasqu\\source\\repos\\reservations_management\\PresentatonLayer\\index.aspx",
+              "RelativeToolTip": "PresentatonLayer\\index.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-21T04:20:32.086Z",
               "EditorCaption": ""
             }
           ]
