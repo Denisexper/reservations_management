@@ -15,7 +15,7 @@
             
             <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Hotel Malibu</a>
+                    <a class="navbar-brand" href="principal.aspx">Hotel Costa Surf</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -40,7 +40,7 @@
 
             
             <div class="container mt-5 pt-5">
-                <h1 class="text-center">BIENVENIDOS AL DASHBOARD DEL HOTEL MALIBU</h1>
+                <h1 class="text-center">BIENVENIDOS AL DASHBOARD DEL HOTEL COASTA SURF</h1>
                 <h2 class="text-center">Gestiona habitaciones, servicios y más desde aquí.</h2>
             </div>
         </div>

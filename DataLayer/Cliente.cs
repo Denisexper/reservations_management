@@ -73,7 +73,7 @@ namespace DataLayer
             using (SqlConnection con = new SqlConnection(conexionString))
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("UPDATE cliente SET nombre = @nombre, dui = @dui, telefono = @telefono, correo = @correo, departamento = @departamento, fecha_registro = @fecha_registro, id_usuario = @id_usuario WHERE id = @id", con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE cliente SET nombre = @nombre, dui = @dui, telefono = @telefono, correo = @correo, departamento = @departamento, fecha_registro = @fecha_registro, id_usuario = @id_usuario WHERE id_cliente = @id", con))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@nombre", nombre);
@@ -95,7 +95,7 @@ namespace DataLayer
             using (SqlConnection con = new SqlConnection(conexionString))
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM cliente WHERE id = @id", con))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM cliente WHERE id_cliente = @id", con))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
                     int filasAfectadas = cmd.ExecuteNonQuery();
