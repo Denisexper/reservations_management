@@ -66,35 +66,42 @@ namespace PresentatonLayer
             }
            
            
-                // Obtener los valores desde los controles del formulario
-                int id_reserva = Convert.ToInt32(txtIdReserva.Text);  // ID Reserva
-                int id_cliente = int.Parse(ddlCliente.SelectedValue);  // Cliente
-                int id_habitaciones = int.Parse(ddlHabitacion.SelectedValue);  // Habitación
-
-                // Obtener las fechas y el descuento
+                int id_reserva = Convert.ToInt32(txtIdReserva.Text);
+                int id_cliente = int.Parse(ddlCliente.SelectedValue);
+                int id_habitaciones = int.Parse(ddlHabitacion.SelectedValue);
                 DateTime checkin = Convert.ToDateTime(txtCheckIn.Text);
                 DateTime checkout = Convert.ToDateTime(txtCheckOut.Text);
-                decimal descuento = Convert.ToDecimal(txtDescuento.Text);
-                string fecha_registro = DateTime.Now.ToString("yyyy-MM-dd"); // Esto genera una cadena de 10 caracteres                                                                         // Fecha de registro
-                int id_usuario = int.Parse(ddlUsuario.SelectedValue);  // Usuario que registra
+                decimal? descuento = null;
+                if (!string.IsNullOrEmpty(txtDescuento.Text))
+                {
+                    descuento = Convert.ToDecimal(txtDescuento.Text);
+                }
+                string fecha_registro = DateTime.Now.ToString("yyyy-MM-dd");                                                                         // Fecha de registro
+                int id_usuario = int.Parse(ddlUsuario.SelectedValue);
 
 
                 bool reservaAgregada = negocioReserva.AgregarReserva(id_reserva, id_cliente, id_habitaciones, descuento, checkin, checkout, fecha_registro, id_usuario);
 
 
-                if (reservaAgregada)
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
-                          "Swal.fire('¡Éxito!', 'La habitación se ha guardado correctamente', 'success');", true);
+            if (reservaAgregada)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                      "Swal.fire('¡Éxito!', 'La habitación se ha guardado correctamente', 'success');", true);
 
-                    CargarReservas();
+                CargarReservas();
+
+                txtIdReserva.Text = "";
+                txtCheckIn.Text = "";
+                txtCheckOut.Text = "";
+                txtDescuento.Text = "";
+                txtFechaRegistro.Text = "";
             }
-                else
-                {
+            else
+            {
 
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
-                          "Swal.fire('Error', 'Error guardando habitacion o el Usuario no existe', 'error');", true);
-                }
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                      "Swal.fire('Error', 'Error guardando habitacion o el Usuario no existe', 'error');", true);
+            }
 
             
 
