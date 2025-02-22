@@ -11,6 +11,8 @@ namespace PresentatonLayer
     public partial class cliente : System.Web.UI.Page
     {
         BiCliente negocioCliente = new BiCliente();
+
+        //lo usuamos para cargar los usuarios en el dropdownlist
         BiUsuarios negocioUsuario = new BiUsuarios();
         protected void Page_Load(object sender, EventArgs e)
         {
