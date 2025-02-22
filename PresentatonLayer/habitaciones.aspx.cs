@@ -51,7 +51,7 @@ namespace PresentatonLayer
                 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
                     "Swal.fire('Error', 'Todos los campos son obligatorios. Por favor, complete la información.', 'warning');", true);
-                return; //para no avanzar mas del proceso
+                return;
             }
 
             int numero = Convert.ToInt32(txtnumero.Text);

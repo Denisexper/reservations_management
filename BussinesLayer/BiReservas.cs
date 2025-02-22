@@ -17,7 +17,7 @@ namespace BussinesLayer
             return reservasN.ObtenerReservas();
         }
 
-        public bool AgregarReserva(int id_reserva, int id_cliente, int id_habitacion, decimal? descuento, DateTime checkin, DateTime checkout, string fecha_registro, int id_usuario)
+        public bool AgregarReserva(int id_reserva, int id_cliente, int id_habitacion, decimal descuento, DateTime checkin, DateTime checkout, string fecha_registro, int id_usuario)
         {
             // Calcular el número de días de la estancia
             int diasEstadia = (checkout - checkin).Days;
@@ -27,10 +27,10 @@ namespace BussinesLayer
             decimal precioTotal = precioPorNoche * diasEstadia;
 
             // Aplicar descuento si existe
-            if (descuento.HasValue)
+            if (descuento > 0)
             {
                 // Aplica descuento: se hace el cálculo del descuento sobre el precio
-                decimal descuentoAplicado = (precioTotal / 1.13M) * (descuento.Value / 100);
+                decimal descuentoAplicado = (precioTotal / 1.13M) * (descuento / 100);
                 precioTotal -= descuentoAplicado;
             }
 
@@ -51,7 +51,8 @@ namespace BussinesLayer
                     precio = 80M;
                     break;
                 default:
-                    throw new Exception("Tipo de habitación no válido.");
+                    precio = 200M;
+                    break;
             }
             return precio;
         }

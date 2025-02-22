@@ -31,7 +31,7 @@ namespace DataLayer
             return dt;
         }
 
-        public bool AgregarReserva(int id_reserva, int id_cliente, int id_habitacion, decimal precio, decimal? descuento, DateTime checkin, DateTime checkout, string fecha_registro, int id_usuario)
+        public bool AgregarReserva(int id_reserva, int id_cliente, int id_habitacion, decimal precio, decimal descuento, DateTime checkin, DateTime checkout, string fecha_registro, int id_usuario)
         {
             using (SqlConnection con = new SqlConnection(conexionString))
             {
