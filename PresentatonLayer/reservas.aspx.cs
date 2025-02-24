@@ -16,6 +16,10 @@ namespace PresentatonLayer
         BiHabitaciones negocioHabitacion = new BiHabitaciones();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null) //si no hay sesion
+            {
+                Response.Redirect("index.aspx"); //lo mandamos al login
+            }
             if (!IsPostBack)
             {
                 CargarReservas();
@@ -98,7 +102,7 @@ namespace PresentatonLayer
             }
             else
             {
-
+                //esto era lo que me daba error, el scrip de js estaba malo
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
                       "Swal.fire('Error', 'Error guardando habitacion o el Usuario no existe', 'error');", true);
             }
