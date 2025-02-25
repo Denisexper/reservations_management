@@ -29,6 +29,8 @@ namespace BussinesLayer
 
             int huespedes = habitacionesN.HuespedesPorHabitacion(id_habitacion);
 
+            
+
             // Obtener el precio por tipo de habitación
             decimal precioPorNoche = ObtenerPrecioPorHuespedes(huespedes);
             decimal precioTotal = precioPorNoche * diasEstadia;
@@ -92,6 +94,18 @@ namespace BussinesLayer
         public bool EliminarReserva(int id_reserva)
         {
             return reservasN.EliminarReserva(id_reserva);
+        }
+
+        // Nueva función: Generar el código de reserva
+        public string GenerarCodigoReserva(int id_reserva, int id_cliente, DateTime fecha_registro)
+        {
+            return reservasN.GenerarCodigoReserva(id_reserva, id_cliente, fecha_registro);
+        }
+
+        // Nueva función: Verificar el código de reserva
+        public DataTable ObtenerReservaPorCodigo(string codigoReserva)
+        {
+            return reservasN.ObtenerReservaPorCodigo(codigoReserva);
         }
 
 

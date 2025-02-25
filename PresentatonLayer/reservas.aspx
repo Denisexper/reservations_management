@@ -61,7 +61,7 @@
                 <asp:BoundField DataField="checkout" HeaderText="Check-Out" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:BoundField DataField="fecha_registro" HeaderText="Fecha Registro" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:BoundField DataField="id_usuario" HeaderText="ID Usuario" />
-
+                <asp:BoundField DataField="codigoReserva" HeaderText="Código Reserva"  />
                 <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
                 <asp:CommandField ShowDeleteButton="True" EditText="Eliminar" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm" />
 

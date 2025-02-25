@@ -1,6 +1,7 @@
 ﻿using BussinesLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -31,7 +32,24 @@ namespace PresentatonLayer
 
         protected void CargarReservas()
         {
-            gvReservas.DataSource = negocioReserva.ObtenerReservas();
+            // Obtener las reservas
+            var reservas = negocioReserva.ObtenerReservas();
+
+            // Agregar la columna "codigoReserva" al DataTable
+            reservas.Columns.Add("codigoReserva", typeof(string));
+
+            // Llenar la columna "codigoReserva" con valores generados dinámicamente
+            foreach (DataRow row in reservas.Rows)
+            {
+                int id_reserva = Convert.ToInt32(row["id_reserva"]);
+                int id_cliente = Convert.ToInt32(row["id_cliente"]);
+                DateTime fecha_registro = Convert.ToDateTime(row["fecha_registro"]);
+
+                row["codigoReserva"] = negocioReserva.GenerarCodigoReserva(id_reserva, id_cliente, fecha_registro);
+            }
+
+            // Enlazar el GridView con el DataTable modificado
+            gvReservas.DataSource = reservas; // Usar el DataTable modificado, no volver a llamar a ObtenerReservas()
             gvReservas.DataBind();
         }
 
@@ -90,7 +108,7 @@ namespace PresentatonLayer
             if (reservaAgregada)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
-                      "Swal.fire('¡Éxito!', 'La habitación se ha guardado correctamente', 'success');", true);
+                        "Swal.fire('¡Éxito!', 'La reserva se ha guardado correctamente', 'success');", true);
 
                 CargarReservas();
 

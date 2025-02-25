@@ -93,5 +93,43 @@ namespace DataLayer
             }
         }
 
+        public string GenerarCodigoReserva(int id_reserva, int id_cliente, DateTime fecha_registro)
+        {
+            // Genera un código usando la combinación de id_reserva, id_cliente y fecha de registro
+            string codigoReserva = $"RES{id_reserva}-CLI{id_cliente}-{fecha_registro:yyyyMMddHHmmss}";
+            return codigoReserva;
+        }
+
+        // Nueva función: Obtener una reserva usando el código de reserva
+        public DataTable ObtenerReservaPorCodigo(string codigoReserva)
+        {
+            // Desglosar el código de reserva para extraer id_reserva
+            string[] partes = codigoReserva.Split('-');
+            if (partes.Length >= 2)
+            {
+                int id_reserva = int.Parse(partes[0].Replace("RES", ""));
+
+                // Obtener la reserva basada en id_reserva
+                DataTable dt = new DataTable();
+                using (SqlConnection con = new SqlConnection(conexionString))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM reserva WHERE id_reserva = @id_reserva", con))
+                    {
+                        cmd.Parameters.AddWithValue("@id_reserva", id_reserva);
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+                return dt;
+            }
+            else
+            {
+                throw new ArgumentException("El código de reserva no es válido.");
+            }
+        }
+
     }
 }

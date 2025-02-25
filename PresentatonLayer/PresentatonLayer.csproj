@@ -73,6 +73,7 @@
     <Content Include="index.aspx" />
     <Content Include="principal.aspx" />
     <Content Include="reservas.aspx" />
+    <Content Include="codigoReserva.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +115,13 @@
     </Compile>
     <Compile Include="reservas.aspx.designer.cs">
       <DependentUpon>reservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="codigoReserva.aspx.cs">
+      <DependentUpon>codigoReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="codigoReserva.aspx.designer.cs">
+      <DependentUpon>codigoReserva.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PresentatonLayer
 {
-    public partial class principal : System.Web.UI.Page
+    public partial class statusReserva : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,9 +17,9 @@ namespace PresentatonLayer
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnBuscarReserva_Click(object sender, EventArgs e)
         {
-            Response.Redirect("codigoReserva.aspx");
+
         }
     }
 }
