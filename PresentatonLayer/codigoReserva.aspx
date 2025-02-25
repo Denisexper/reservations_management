@@ -20,7 +20,9 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="txtCodigoReserva">Código de Reserva</label>
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                                 <asp:TextBox ID="txtCodigoReserva" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese el código de reserva"></asp:TextBox>
+                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                             </div>
                             <div class="form-group text-center">
                                 <asp:Button ID="btnBuscarReserva" runat="server" Text="Buscar Reserva" OnClick="btnBuscarReserva_Click" CssClass="btn btn-primary btn-block" />

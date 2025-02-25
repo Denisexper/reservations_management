@@ -45,6 +45,7 @@
     <Compile Include="BiHabitaciones.cs" />
     <Compile Include="BiReservas.cs" />
     <Compile Include="BiUsuarios.cs" />
+    <Compile Include="obtenerReserva.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

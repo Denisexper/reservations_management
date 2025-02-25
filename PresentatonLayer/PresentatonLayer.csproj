@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cliente.aspx" />
+    <Content Include="DetallesReserva.aspx" />
     <Content Include="Global.asax" />
     <Content Include="habitaciones.aspx" />
     <Content Include="index.aspx" />
@@ -83,6 +84,13 @@
     </Compile>
     <Compile Include="cliente.aspx.designer.cs">
       <DependentUpon>cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesReserva.aspx.cs">
+      <DependentUpon>DetallesReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesReserva.aspx.designer.cs">
+      <DependentUpon>DetallesReserva.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
