@@ -11,6 +11,7 @@ namespace BussinesLayer
     public class BiReservas
     {
         Reservas reservasN = new Reservas();
+        Habitaciones habitacionesN = new Habitaciones();
 
         public DataTable ObtenerReservas()
         {
@@ -21,53 +22,64 @@ namespace BussinesLayer
         {
             // Calcular el número de días de la estancia
             int diasEstadia = (checkout - checkin).Days;
+            if(diasEstadia == 0)
+            {
+                diasEstadia = 1;
+            }
+
+            int huespedes = habitacionesN.HuespedesPorHabitacion(id_habitacion);
 
             // Obtener el precio por tipo de habitación
-            decimal precioPorNoche = ObtenerPrecioPorHabitacion(id_habitacion);
+            decimal precioPorNoche = ObtenerPrecioPorHuespedes(huespedes);
             decimal precioTotal = precioPorNoche * diasEstadia;
 
             // Aplicar descuento si existe
             if (descuento.HasValue)
             {
-                // Aplica descuento: se hace el cálculo del descuento sobre el precio
-                decimal descuentoAplicado = (precioTotal / 1.13M) * (descuento.Value / 100);
-                precioTotal -= descuentoAplicado;
+                if (descuento.Value == 10 || descuento.Value == 25)
+                {
+                    // Aplica descuento: se hace el cálculo del descuento sobre el precio
+                    decimal descuentoAplicado = precioTotal * (descuento.Value / 100);
+                    precioTotal -= descuentoAplicado;
+                }
+                else
+            {
+                    throw new ArgumentException("El descuento solo puede ser 10% o 25%");
+                }
             }
+            
 
             // Llamar a la capa de datos para insertar la reserva en la base de datos
             return reservasN.AgregarReserva(id_reserva, id_cliente, id_habitacion, precioTotal, descuento, checkin, checkout, fecha_registro, id_usuario);
         }
 
         // Lógica para obtener el precio por habitación
-        private decimal ObtenerPrecioPorHabitacion(int id_habitacion)
+        private decimal ObtenerPrecioPorHuespedes(int huespedes)
         {
             decimal precio = 0;
-            switch (id_habitacion)
+            if (huespedes <= 2)
             {
-                case 2: // Habitación de 3 huéspedes familiar
-                    precio = 100M;
-                    break;
-                case 3: // Habitación de 2 huéspedes simple
-                    precio = 80M;
-                    break;
-                case 4: // Habitación de 4 huésped normal
-                    precio = 125M;
-                    break;
-                case 8: // Habitación de 6 huespedes simple pluss
-                    precio = 150M;
-                    break;
-                case 9: // Habitación de 8 huéspedes familiar largue
-                    precio = 175M;
-                    break;
-                case 10: // habitacion de 10 huespedes grande
-                    precio = 300M;
-                    break;
-                case 11: // habitacion de 12 huespedes extra grande
-                    precio = 325M;
-                    break;
-                default:
-                    precio = 100M;
-                    break;
+                precio = 80M;
+            }
+            else if (huespedes <= 4)
+            {
+                precio = 125M;
+            }
+            else if (huespedes <= 6)
+            {
+                precio = 150M;
+            }
+            else if (huespedes <= 8)
+            {
+                precio = 175M;
+            }
+            else if (huespedes <= 10)
+            {
+                precio = 300M;
+            }
+            else if (huespedes <= 12)
+            {
+                precio = 325M;
             }
             return precio;
         }

@@ -127,5 +127,19 @@ namespace DataLayer
             return dt;
         }
 
+        //para obtener el número de huespedes por habitación esto lo enlazamos en negocio reserva
+        public int HuespedesPorHabitacion(int id_habitacion)
+        {
+            string query = "SELECT huespedes FROM habitaciones WHERE id_habitaciones = @id_habitacion";
+            using (SqlConnection con = new SqlConnection(conexionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id_habitacion", id_habitacion);
+                con.Open();
+                int huespedes = (int)cmd.ExecuteScalar();
+                return huespedes;
+            }
+        }
+
     }
 }

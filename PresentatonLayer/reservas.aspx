@@ -43,13 +43,13 @@
         <br />
         <br />
         <h2 class="text-center mb-4">ADMINISTRACION DE RESERVAS</h2>
-        <asp:GridView ID="gvReservas" runat="server" 
-            AutoGenerateColumns="False" 
+        <asp:GridView ID="gvReservas" runat="server"
+            AutoGenerateColumns="False"
             DataKeyNames="id_reserva"
-            CssClass="table table-striped table-bordered" 
-            OnRowCancelingEdit="gvReservas_RowCancelingEdit" 
-            OnRowDeleting="gvReservas_RowDeleting" 
-            OnRowEditing="gvReservas_RowEditing" 
+            CssClass="table table-striped table-bordered"
+            OnRowCancelingEdit="gvReservas_RowCancelingEdit"
+            OnRowDeleting="gvReservas_RowDeleting"
+            OnRowEditing="gvReservas_RowEditing"
             OnRowUpdating="gvReservas_RowUpdating">
             <Columns>
                 <asp:BoundField DataField="id_reserva" HeaderText="ID Reserva" />
@@ -62,8 +62,8 @@
                 <asp:BoundField DataField="fecha_registro" HeaderText="Fecha Registro" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:BoundField DataField="id_usuario" HeaderText="ID Usuario" />
 
-                <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm"/>
-                <asp:CommandField ShowDeleteButton="True" EditText="Eliminar" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm"/>
+                <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
+                <asp:CommandField ShowDeleteButton="True" EditText="Eliminar" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm" />
 
             </Columns>
         </asp:GridView>
@@ -99,8 +99,12 @@
             </div>
 
             <div class="mb-3">
-                <label for="txtDescuento" class="form-label">Descuento (%):</label>
-                <asp:TextBox ID="txtDescuento" runat="server" CssClass="form-control"></asp:TextBox>
+                <label class="form-label">Descuento (%):</label>
+                <asp:RadioButtonList ID="rblDescuento" runat="server" CssClass="form-control">
+                    <asp:ListItem Text="Sin descuento" Value="" />
+                    <asp:ListItem Text="10%" Value="10" />
+                    <asp:ListItem Text="25%" Value="25" />
+                </asp:RadioButtonList>
             </div>
 
             <div class="mb-3">

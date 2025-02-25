@@ -38,14 +38,11 @@
                 </div>
             </div>
         </nav>
-
     </div>
-
-    <div class="row">
-        <div class="col-12 mb-3">
-            <h2 class="text-center">Gestionar Habitaciones</h2>
-        </div>
-    </div>
+    <br />
+    <br />
+    <br />
+      <h2 class="text-center mb-4">Gestionar Habitaciones</h2>
         <!-- contenido de la pagina-->
         <form id="form1" runat="server">
             <div class="container mt-4">

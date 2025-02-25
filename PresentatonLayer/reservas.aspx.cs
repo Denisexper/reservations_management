@@ -76,9 +76,9 @@ namespace PresentatonLayer
             DateTime checkin = Convert.ToDateTime(txtCheckIn.Text);
             DateTime checkout = Convert.ToDateTime(txtCheckOut.Text);
             decimal? descuento = null;
-            if (!string.IsNullOrEmpty(txtDescuento.Text))
+            if (rblDescuento.SelectedValue != "")  // Verificamos si hay un valor seleccionado
             {
-                descuento = Convert.ToDecimal(txtDescuento.Text);
+                descuento = decimal.Parse(rblDescuento.SelectedValue);  // Asignamos el valor de descuento
             }
             string fecha_registro = DateTime.Now.ToString("yyyy-MM-dd");                                                                         // Fecha de registro
             int id_usuario = int.Parse(ddlUsuario.SelectedValue);
@@ -97,7 +97,7 @@ namespace PresentatonLayer
                 txtIdReserva.Text = "";
                 txtCheckIn.Text = "";
                 txtCheckOut.Text = "";
-                txtDescuento.Text = "";
+                rblDescuento.ClearSelection();
                 txtFechaRegistro.Text = "";
             }
             else
@@ -129,6 +129,13 @@ namespace PresentatonLayer
             if (!string.IsNullOrEmpty((row.Cells[4].Controls[0] as TextBox).Text))
             {
                 descuento = Convert.ToDecimal((row.Cells[4].Controls[0] as TextBox).Text);
+            }
+
+            // Si el descuento es válido, se aplica al precio.
+            if (descuento.HasValue && (descuento.Value == 10 || descuento.Value == 20))
+            {
+                decimal descuentoAplicado = precio * (descuento.Value / 100);
+                precio -= descuentoAplicado;
             }
             DateTime checkin = Convert.ToDateTime((row.Cells[5].Controls[0] as TextBox).Text);
             DateTime checkout = Convert.ToDateTime((row.Cells[6].Controls[0] as TextBox).Text);

@@ -40,14 +40,11 @@
 
         <!-- contenido -->
     </div>
-    <div class="container mt-4">
+            <br />
+            <br />
+            <br />
+            <h2 class="text-center mb-4">Gestionar Clientes</h2>
         <form id="form1" runat="server">
-            <div class="row">
-                <div class="col-12 mb-3">
-                    <h2 class="text-center">Gestionar Clientes</h2>
-                </div>
-            </div>
-
             <div class="row mb-3">
                 <div class="col-12">
                     <asp:GridView ID="dvClientes"
