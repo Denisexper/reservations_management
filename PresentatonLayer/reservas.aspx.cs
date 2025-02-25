@@ -68,23 +68,23 @@ namespace PresentatonLayer
                     "Swal.fire('Error', 'Algunos campos son obligatorios. Por favor, complete la información.', 'warning');", true);
                 return;
             }
-           
-           
-                int id_reserva = Convert.ToInt32(txtIdReserva.Text);
-                int id_cliente = int.Parse(ddlCliente.SelectedValue);
-                int id_habitaciones = int.Parse(ddlHabitacion.SelectedValue);
-                DateTime checkin = Convert.ToDateTime(txtCheckIn.Text);
-                DateTime checkout = Convert.ToDateTime(txtCheckOut.Text);
-                decimal? descuento = null;
-                if (!string.IsNullOrEmpty(txtDescuento.Text))
-                {
-                    descuento = Convert.ToDecimal(txtDescuento.Text);
-                }
-                string fecha_registro = DateTime.Now.ToString("yyyy-MM-dd");                                                                         // Fecha de registro
-                int id_usuario = int.Parse(ddlUsuario.SelectedValue);
 
 
-                bool reservaAgregada = negocioReserva.AgregarReserva(id_reserva, id_cliente, id_habitaciones, descuento, checkin, checkout, fecha_registro, id_usuario);
+            int id_reserva = Convert.ToInt32(txtIdReserva.Text);
+            int id_cliente = int.Parse(ddlCliente.SelectedValue);
+            int id_habitaciones = int.Parse(ddlHabitacion.SelectedValue);
+            DateTime checkin = Convert.ToDateTime(txtCheckIn.Text);
+            DateTime checkout = Convert.ToDateTime(txtCheckOut.Text);
+            decimal? descuento = null;
+            if (!string.IsNullOrEmpty(txtDescuento.Text))
+            {
+                descuento = Convert.ToDecimal(txtDescuento.Text);
+            }
+            string fecha_registro = DateTime.Now.ToString("yyyy-MM-dd");                                                                         // Fecha de registro
+            int id_usuario = int.Parse(ddlUsuario.SelectedValue);
+
+
+            bool reservaAgregada = negocioReserva.AgregarReserva(id_reserva, id_cliente, id_habitaciones, descuento, checkin, checkout, fecha_registro, id_usuario);
 
 
             if (reservaAgregada)
@@ -107,11 +107,68 @@ namespace PresentatonLayer
                       "Swal.fire('Error', 'Error guardando habitacion o el Usuario no existe', 'error');", true);
             }
 
-            
 
-           
+        }
 
+        protected void gvReservas_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            gvReservas.EditIndex = e.NewEditIndex;
+            CargarReservas();
+        }
 
+        protected void gvReservas_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            int id = Convert.ToInt32(gvReservas.DataKeys[e.RowIndex].Value.ToString());
+            GridViewRow row = gvReservas.Rows[e.RowIndex];
+
+            int id_reserva = Convert.ToInt32((row.Cells[0].Controls[0] as TextBox).Text);
+            int id_cliente = Convert.ToInt32((row.Cells[1].Controls[0] as TextBox).Text);
+            int id_habitacion = Convert.ToInt32((row.Cells[2].Controls[0] as TextBox).Text);
+            decimal precio = Convert.ToDecimal((row.Cells[3].Controls[0] as TextBox).Text);
+            decimal? descuento = null;
+            if (!string.IsNullOrEmpty((row.Cells[4].Controls[0] as TextBox).Text))
+            {
+                descuento = Convert.ToDecimal((row.Cells[4].Controls[0] as TextBox).Text);
+            }
+            DateTime checkin = Convert.ToDateTime((row.Cells[5].Controls[0] as TextBox).Text);
+            DateTime checkout = Convert.ToDateTime((row.Cells[6].Controls[0] as TextBox).Text);
+            string fecha_registro = (row.Cells[7].Controls[0] as TextBox).Text;
+            int id_usuario = Convert.ToInt32((row.Cells[8].Controls[0] as TextBox).Text);
+
+            if (negocioReserva.ModificarReserva(id_reserva, id_cliente, id_habitacion, precio, descuento, checkin, checkout, fecha_registro, id_usuario))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                      "Swal.fire('¡Éxito!', 'La habitación se ha actualizado correctamente', 'success');", true);
+                gvReservas.EditIndex = -1;
+                CargarReservas();
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                      "Swal.fire('Error', 'Error actualizando habitación', 'error');", true);
+            }
+        }
+
+        protected void gvReservas_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            gvReservas.EditIndex = -1;
+            CargarReservas();
+        }
+
+        protected void gvReservas_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int id = Convert.ToInt32(gvReservas.DataKeys[e.RowIndex].Value.ToString());
+            if (negocioReserva.EliminarReserva(id))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                      "Swal.fire('¡Éxito!', 'La habitación se ha eliminado correctamente', 'success');", true);
+                CargarReservas();
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert",
+                      "Swal.fire('Error', 'Error eliminando habitación', 'error');", true);
+            }
         }
     }
 }

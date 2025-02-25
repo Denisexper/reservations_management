@@ -42,7 +42,15 @@
         <br />
         <br />
         <br />
-        <asp:GridView ID="gvReservas" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered">
+        <h2 class="text-center mb-4">ADMINISTRACION DE RESERVAS</h2>
+        <asp:GridView ID="gvReservas" runat="server" 
+            AutoGenerateColumns="False" 
+            DataKeyNames="id_reserva"
+            CssClass="table table-striped table-bordered" 
+            OnRowCancelingEdit="gvReservas_RowCancelingEdit" 
+            OnRowDeleting="gvReservas_RowDeleting" 
+            OnRowEditing="gvReservas_RowEditing" 
+            OnRowUpdating="gvReservas_RowUpdating">
             <Columns>
                 <asp:BoundField DataField="id_reserva" HeaderText="ID Reserva" />
                 <asp:BoundField DataField="id_cliente" HeaderText="ID Cliente" />
@@ -53,6 +61,10 @@
                 <asp:BoundField DataField="checkout" HeaderText="Check-Out" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:BoundField DataField="fecha_registro" HeaderText="Fecha Registro" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:BoundField DataField="id_usuario" HeaderText="ID Usuario" />
+
+                <asp:CommandField ShowEditButton="True" EditText="Editar" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm"/>
+                <asp:CommandField ShowDeleteButton="True" EditText="Eliminar" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm"/>
+
             </Columns>
         </asp:GridView>
 

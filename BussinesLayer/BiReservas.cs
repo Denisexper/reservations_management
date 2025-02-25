@@ -72,6 +72,16 @@ namespace BussinesLayer
             return precio;
         }
 
+        public bool ModificarReserva(int id_reserva, int id_cliente, int id_habitacion, decimal precio, decimal? descuento, DateTime checkin, DateTime checkout, string fecha_registro, int id_usuario)
+        {
+            return reservasN.ModificarReserva(id_reserva, id_cliente, id_habitacion, precio, descuento, checkin, checkout, fecha_registro, id_usuario);
+        }
+
+        public bool EliminarReserva(int id_reserva)
+        {
+            return reservasN.EliminarReserva(id_reserva);
+        }
+
 
     }
 }

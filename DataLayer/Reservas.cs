@@ -55,7 +55,7 @@ namespace DataLayer
             }
         }
 
-        public void ModificarReserva(int id_reserva, int id_cliente, int id_habitacion, decimal precio, decimal? descuento, DateTime checkin, DateTime checkout, string fecha_registro, int id_usuario)
+        public bool ModificarReserva(int id_reserva, int id_cliente, int id_habitacion, decimal precio, decimal? descuento, DateTime checkin, DateTime checkout, string fecha_registro, int id_usuario)
         {
             using (SqlConnection con = new SqlConnection(conexionString))
             {
@@ -66,17 +66,19 @@ namespace DataLayer
                     cmd.Parameters.AddWithValue("@id_cliente", id_cliente);
                     cmd.Parameters.AddWithValue("@id_habitacion", id_habitacion);
                     cmd.Parameters.AddWithValue("@precio", precio);
-                    cmd.Parameters.AddWithValue("@descuento", descuento);
+                    cmd.Parameters.AddWithValue("@descuento", (object)descuento ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@checkin", checkin);
                     cmd.Parameters.AddWithValue("@checkout", checkout);
                     cmd.Parameters.AddWithValue("@fecha_registro", fecha_registro);
                     cmd.Parameters.AddWithValue("@id_usuario", id_usuario);
-                    cmd.ExecuteNonQuery();
+
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    return filasAfectadas > 0;
                 }
             }
         }
 
-        public void EliminarReserva(int id_reserva)
+        public bool EliminarReserva(int id_reserva)
         {
             using (SqlConnection con = new SqlConnection(conexionString))
             {
@@ -84,7 +86,9 @@ namespace DataLayer
                 using (SqlCommand cmd = new SqlCommand("DELETE FROM reserva WHERE id_reserva = @id_reserva", con))
                 {
                     cmd.Parameters.AddWithValue("@id_reserva", id_reserva);
-                    cmd.ExecuteNonQuery();
+
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    return filasAfectadas > 0;
                 }
             }
         }
