@@ -24,6 +24,7 @@
                                 <asp:TextBox ID="txtCodigoReserva" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese el código de reserva"></asp:TextBox>
                                 <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
                             </div>
+                            <br /> 
                             <div class="form-group text-center">
                                 <asp:Button ID="btnBuscarReserva" runat="server" Text="Buscar Reserva" OnClick="btnBuscarReserva_Click" CssClass="btn btn-primary btn-block" />
                             </div>

@@ -68,6 +68,10 @@
                 
             </div>
         </div>
+        <br />
+        <div class="form-group text-center">
+            <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Regresar" OnClick="Button1_Click" />
+        </div>
     </form>
 </body>
 </html>
