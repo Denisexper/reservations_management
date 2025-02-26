@@ -12,15 +12,17 @@ namespace DataLayer
     public class obtenerReservas
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+
         // Método para obtener la información de la reserva por el código de reserva
         public DataTable ObtenerReservaPorCodigo(string codigoReserva)
         {
-            // Desglosar el código de reserva para extraer id_reserva
-            string[] partes = codigoReserva.Split('-');
-            if (partes.Length >= 2)
-            {
-                int id_reserva = int.Parse(partes[0].Replace("RES", ""));
+            
+            
+            string idReservaStr = codigoReserva.Substring(0, 1); //depende la longitud que tenga el id_reserva en este caso es 1
+            int id_reserva;
 
+            if (int.TryParse(idReservaStr, out id_reserva))
+            {
                 // Obtener la reserva basada en id_reserva
                 DataTable dt = new DataTable();
                 using (SqlConnection con = new SqlConnection(connectionString))
@@ -42,7 +44,8 @@ namespace DataLayer
                 throw new ArgumentException("El código de reserva no es válido.");
             }
         }
+
     }
-    
-    
+
+
 }

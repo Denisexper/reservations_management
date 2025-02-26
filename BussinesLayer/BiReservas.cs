@@ -102,11 +102,6 @@ namespace BussinesLayer
             return reservasN.GenerarCodigoReserva(id_reserva, id_cliente, fecha_registro);
         }
 
-        // Nueva función: Verificar el código de reserva
-        public DataTable ObtenerReservaPorCodigo(string codigoReserva)
-        {
-            return reservasN.ObtenerReservaPorCodigo(codigoReserva);
-        }
 
 
     }
